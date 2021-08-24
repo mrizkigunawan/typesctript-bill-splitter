@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="font-mono">
+    <div class="bg-green-100 w-full h-full md:h-screen">
+      <div class="py-10 lg:pt-20">
+        <h1
+          class="
+            text-center text-xl text-green-600
+            font-semibold
+            uppercase
+            tracking-widest
+          "
+        >
+          <div>spli</div>
+          <div>tter</div>
+        </h1>
+      </div>
+
+      <!-- calculator -->
+      <div class="w-full md:max-w-2xl mx-auto">
+        <div
+          class="
+            bg-white
+            rounded-tr-3xl rounded-tl-3xl
+            md:rounded-3xl
+            p-6
+            space-y-6
+            md:space-y-0 md:grid md:grid-cols-2 md:gap-7
+            shadow-xl
+          "
+        >
+          <!-- left side -->
+          <div class="space-y-6">
+            <div>
+              <span class="inline-block mb-2 font-semibold text-gray-500"
+                >Bill</span
+              >
+              <div class="relative">
+                <div
+                  class="
+                    absolute
+                    inset-y-0
+                    left-0
+                    transform
+                    translate-y-1/4 translate-x-1/2
+                  "
+                >
+                  <i class="fas fa-fw fa-dollar-sign text-indigo-200"></i>
+                </div>
+                <input
+                  type="number"
+                  name="bill"
+                  id="bill"
+                  min="1"
+                  max="99999"
+                  placeholder="0"
+                  class="form-control-number pl-8 pr-4 py-2"
+                />
+              </div>
+            </div>
+            <div>
+              <span class="inline-block mb-2 font-semibold text-gray-500"
+                >Select Tip %</span
+              >
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <button id="tip-5" class="btn-indigo button-tip" data-tip="5">
+                  5%
+                </button>
+                <button id="tip-10" class="btn-indigo button-tip" data-tip="10">
+                  10%
+                </button>
+                <button id="tip-15" class="btn-indigo button-tip" data-tip="15">
+                  15%
+                </button>
+                <button id="tip-25" class="btn-indigo button-tip" data-tip="25">
+                  25%
+                </button>
+                <button id="tip-50" class="btn-indigo button-tip" data-tip="50">
+                  50%
+                </button>
+                <button id="tip-75" class="btn-indigo button-tip" data-tip="75">
+                  75%
+                </button>
+              </div>
+            </div>
+            <div>
+              <span class="inline-block mb-2 font-semibold text-gray-500"
+                >Number of People</span
+              >
+              <div class="relative">
+                <div
+                  class="
+                    absolute
+                    inset-y-0
+                    left-0
+                    transform
+                    translate-y-1/4 translate-x-1/2
+                  "
+                >
+                  <i class="fas fa-fw fa-user text-indigo-200"></i>
+                </div>
+                <input
+                  type="number"
+                  name="people"
+                  id="people"
+                  min="1"
+                  max="1000"
+                  placeholder="0"
+                  class="form-control-number pl-8 pr-4 py-2"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- right side -->
+          <div
+            class="
+              md:flex md:flex-col md:justify-between
+              h-full
+              bg-indigo-700
+              rounded-3xl
+              p-6
+              space-y-6
+              md:space-y-0
+            "
+          >
+            <div class="space-y-6">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold text-white">Tip Amount</div>
+                  <div class="text-sm text-gray-300">/ person</div>
+                </div>
+                <div
+                  id="tip-per-person"
+                  class="text-3xl font-bold text-indigo-200 text-right"
+                >
+                  $0
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="font-semibold text-white">Total</div>
+                  <div class="text-sm text-gray-300">/ person</div>
+                </div>
+                <div
+                  id="total-per-person"
+                  class="text-3xl font-bold text-indigo-200 text-right"
+                >
+                  $0
+                </div>
+              </div>
+            </div>
+            <button class="btn-light-indigo" id="reset">reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
